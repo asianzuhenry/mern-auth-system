@@ -45,3 +45,11 @@ mern-auth-system/
 ```bash
 git clone https://github.com/your-username/mern-auth-system.git
 cd mern-auth-system
+
+## screenshotS
+```
+![MERN Auth System Screenshot](./screenshots/screenshot1.png)
+![MERN Auth System Screenshot](./screenshots/screenshot2.png)
+![MERN Auth System Screenshot](./screenshots/screenshot3.png)
+![MERN Auth System Screenshot](./screenshots/screenshot4.png)
+```
