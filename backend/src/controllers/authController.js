@@ -1,9 +1,9 @@
-const User = require("../models/User");
-const bcrypt = require("bcryptjs");
-const generateToken = require("../utils/generateToken");
-const { get } = require("mongoose");
+// authController.js
+import bcrypt from "bcryptjs";
+import User from "../models/User.js";
+import generateToken from "../utils/generateToken.js";
 
-const RegisterUser = async (req, res) => {
+export const RegisterUser = async (req, res) => {
   const { username, email, password } = req.body;
 
   // Validate user input
@@ -37,7 +37,7 @@ const RegisterUser = async (req, res) => {
   }
 };
 
-const LoginUser = async (req, res) => {
+export const LoginUser = async (req, res) => {
   const { email, password } = req.body;
 
   // Validate user input
@@ -69,7 +69,7 @@ const LoginUser = async (req, res) => {
   }
 };
 
-const getUserProfile = async (req, res) => {
+export const getUserProfile = async (req, res) => {
   const userId = req.user.id;
 
   try {
@@ -85,4 +85,9 @@ const getUserProfile = async (req, res) => {
   }
 };
 
-module.exports = { RegisterUser, LoginUser, getUserProfile };
+// New controller for admin dashboard
+export const getAdminDashboard = async (req, res) => {
+  const Users = await User.find();
+
+  res.status(200).json({ message: "Welcome to the admin dashboard", users: Users });
+};

@@ -1,47 +1,12 @@
-# 📦 Frontend (React + Tailwind)
+# React + Vite
 
-The frontend is built with React, Vite, and Tailwind CSS. It handles user registration, login, and dashboard views. Authentication state is managed using React Router and stored in localStorage.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🔹 Features
+Currently, two official plugins are available:
 
-- Register and login forms
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- Form validation with React hooks
+## Expanding the ESLint configuration
 
-- Secure API requests to backend (JWT support)
-
-- Protected routes using React Router
-
-- Styled with Tailwind CSS v4
-
-## 🚀 Setup Instructions
-```
-cd frontend
-npm install
-
-```
-
-Start development server:
-```
-npm run dev
-```
-Then open: http://localhost:5173
-
-## 📁 Project Structure
-```bash
-frontend/
-│
-├── public/               # Static assets
-├── src/
-│   ├── components/       # Reusable UI components
-│   ├── pages/            # Register, Login, Dashboard
-│   ├── App.jsx           # Main app with routes
-│   ├── index.css         # Tailwind imports
-│   └── main.jsx          # Entry point
-│
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-└── vite.config.js
-```
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

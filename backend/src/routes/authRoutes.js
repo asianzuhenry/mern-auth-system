@@ -1,10 +1,7 @@
-const express = require("express");
-const {
-  RegisterUser,
-  LoginUser,
-  getUserProfile,
-} = require("../controllers/authController");
-const { protect } = require("../middleware/authMiddleware");
+// authRoutes.js
+import express from "express";
+import { RegisterUser, LoginUser, getUserProfile, getAdminDashboard } from "../controllers/authController.js";
+import { protect, isAdmin } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 
@@ -14,5 +11,6 @@ router.post("/login", LoginUser);
 
 // protected routes
 router.get("/profile", protect, getUserProfile);
+router.get("/dashboard", protect, isAdmin, getAdminDashboard); // New admin route
 
-module.exports = router;
+export default router;
