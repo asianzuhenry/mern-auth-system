@@ -39,7 +39,7 @@ function Dashboard() {
     }
 
     checkAdmin();
-  }, []);
+  }, [navigate]);
 
   if (loading) return <p>Loading...</p>;
 
